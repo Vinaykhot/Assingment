@@ -1,17 +1,17 @@
-//problem : Convert the String in Upper case to Lower
+//problem : Convert the String in Lower case to Upper
 
 //input : Marvelous Multi OS
-//output : marvellous multi os
+//output : MARVELLOUS MULTI OS
 #include<stdio.h>
 
-void strlwrx(char *str)
+void struprX(char *str)
 {
     
     while(*str != '\0')
     {
-        if((*str >= 'A') && (*str <= 'Z'))
+        if((*str >= 'a') && (*str <= 'z'))
         {
-            *str = *str + 32;
+            *str = *str - 32;
         }
         str++;
     }
@@ -25,7 +25,7 @@ int main()
     printf("Enter String:- ");
     scanf("%[^'\n']s",arr);
 
-    strlwrx(arr);
+    struprX(arr);
     printf("Updated String is :%s\n",arr);
 
     return 0;

@@ -1,15 +1,19 @@
-//problem : Convert the String in Upper case to Lower
+//problem : Toggle the String 
 
 //input : Marvelous Multi OS
-//output : marvellous multi os
+//output : mARVELLOUS mULTI os
 #include<stdio.h>
 
-void strlwrx(char *str)
+void strtoggleX(char *str)
 {
     
     while(*str != '\0')
     {
-        if((*str >= 'A') && (*str <= 'Z'))
+        if((*str >= 'a') && (*str <= 'z'))
+        {
+            *str = *str - 32;
+        }
+        else if((*str >= 'A') && (*str <= 'Z'))
         {
             *str = *str + 32;
         }
@@ -25,7 +29,7 @@ int main()
     printf("Enter String:- ");
     scanf("%[^'\n']s",arr);
 
-    strlwrx(arr);
+    strtoggleX(arr);
     printf("Updated String is :%s\n",arr);
 
     return 0;
